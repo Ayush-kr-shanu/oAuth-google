@@ -9,17 +9,6 @@ const { User } = require("./Models/user");
 require("dotenv").config();
 
 const app = express();
-// app.use(cors({origin:"*"}))
-// app.use(express.json())
-
-// app.get("/user", async(req,res)=>{
-//     try {
-//         const user=await User.findAll()
-//         return res.send(user)
-//     } catch (err) {
-//         return res.send("err")
-//     }
-// })
 
 app.get("/", (req, res) => {
   res.send("<h1>welcome to my world</h1>");
@@ -78,7 +67,7 @@ app.get(
     // });
     console.log("User's Name:", user.name); // Log the user's name
     console.log("User's Email:", user.email); // Log the user's email
-    res.redirect(`http://localhost:3000/?token=${token}&username=${user.name}&isLoggedIn=true`);
+    res.redirect(`https://school.myleadingcampus.com/dashboard?token=${token}&username=${user.name}&isLoggedIn=true`);
   }
 );
 
